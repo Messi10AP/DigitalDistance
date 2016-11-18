@@ -1,0 +1,33 @@
+<script
+			  src="https://code.jquery.com/jquery-3.1.0.min.js"
+			  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+			  crossorigin="anonymous"></script>
+<script>
+  $.ajax({
+    url:"https://api.scriptrapps.io/test?auth_token=STlDMzczMEU2Mg==",
+    success: 	function (finalanswer)
+    {
+    var x = JSON.parse(finalanswer);
+     console.log(Object.keys(x));
+    $("#final").html("Your measurement is:\n<strong>" + x.response.result + "</strong> meters\n");
+  }
+  });
+</script>
+<!doctype html>
+<title>DigitalDistance</title>
+<style>
+  body { text-align: center; padding: 150px; background-image: url("http://www.siwallpaperhd.com/wp-content/uploads/2015/07/geometric_background_hd.jpg"); }
+  h1 { font-size: 60px; }
+  body { font: 30px Helvetica, sans-serif; color: #fff; }
+  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
+  a { color: #dc8100; text-decoration: none; }
+  a:hover { color: #333; text-decoration: none; }
+</style>
+
+<article>
+  <h1>Thanks for using DigitalDistance!</h1>
+    <div>
+        <p id="final"><a href="mailto:#">contact us</a></p>
+        <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br>Abhishek Patel<br>Kunal Adhia<br>Poojit Hegde</p>
+    </div>
+</article>
